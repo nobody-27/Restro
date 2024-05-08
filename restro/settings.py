@@ -92,7 +92,7 @@ WSGI_APPLICATION = 'restro.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # MySQL database backend
-        'NAME': 'restro',          # Name of your database
+        'NAME': 'nobody32$default',          # Name of your database
         'USER': 'nobody32',          # Database user
         'PASSWORD': 'Niraj@123',  # Database password
         'HOST': 'nobody32.mysql.pythonanywhere-services.com',                   # Set to empty string for localhost
