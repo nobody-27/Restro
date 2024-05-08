@@ -1,4 +1,5 @@
 asgiref==3.8.1
+colorama==0.4.6
 distlib==0.3.8
 Django==5.0.4
 django-after-response==0.2.2
@@ -7,6 +8,8 @@ djangorestframework==3.15.1
 djangorestframework-simplejwt==5.3.1
 pillow==10.3.0
 PyJWT==2.8.0
+pypng==0.20220715.0
+qrcode==7.4.2
 sqlparse==0.5.0
 typing_extensions==4.11.0
 tzdata==2024.1

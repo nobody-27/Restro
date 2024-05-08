@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-58yx^_x=l@fkkr)fjxy(pp!5)$=a(fpsw5c_lq0fxfn*9d==)e
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [".vercel.app","*"]
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -142,4 +142,10 @@ EMAIL_HOST_PASSWORD = "xnci exsx ofty kuag "
 
 
 
+STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'static',]
 
+
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
