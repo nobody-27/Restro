@@ -17,7 +17,6 @@ class UserAdmin(BaseUserAdmin):
     # )
 
     # Make last_login field read-only (optional)
-    readonly_fields = ('last_login',)
 
 # First, unregister the existing User model admin, then register the new UserAdmin
 admin.site.unregister(User)
