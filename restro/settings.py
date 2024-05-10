@@ -42,9 +42,12 @@ INSTALLED_APPS = [
     'authentication',
     'shops',
     'permissions',
+
+    #external
     'rest_framework',
     'after_response',
     'django_extensions',
+     'rest_framework_simplejwt',
 
 ]
 
@@ -160,3 +163,27 @@ STATICFILES_DIRS = [BASE_DIR / 'static',]
 
 MEDIA_URL = 'media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+
+    )
+}
+
+
+from datetime import timedelta
+
+SIMPLE_JWT = {
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
+    "ROTATE_REFRESH_TOKENS": False,
+    "BLACKLIST_AFTER_ROTATION": False,
+    "UPDATE_LAST_LOGIN": True,
+}
+
+
+try:
+    from restro.local_settings import *
+except:
+    print("e......")
+    pass

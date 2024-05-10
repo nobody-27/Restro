@@ -12,4 +12,5 @@ urlpatterns = [
         ActivateAccountView.as_view(),
         name="activate_account",
     ),
+    path('login/',LoginApiView.as_view(),name="login")
 ]

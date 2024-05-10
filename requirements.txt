@@ -1,5 +1,7 @@
 asgiref==3.8.1
+cffi==1.16.0
 colorama==0.4.6
+cryptography==42.0.7
 distlib==0.3.8
 Django==5.0.4
 django-after-response==0.2.2
@@ -8,6 +10,7 @@ djangorestframework==3.15.1
 djangorestframework-simplejwt==5.3.1
 mysqlclient==2.2.4
 pillow==10.3.0
+pycparser==2.22
 PyJWT==2.8.0
 pypng==0.20220715.0
 qrcode==7.4.2

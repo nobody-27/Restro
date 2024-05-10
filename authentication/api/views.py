@@ -2,6 +2,12 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
+
+from django.shortcuts import render
+from rest_framework_simplejwt.tokens import RefreshToken
+from rest_framework_simplejwt.views import TokenObtainPairView
+from .serializers import CustomAuthTokenSerializer
+
 from django.utils.encoding import force_str, force_bytes
 from django.contrib.auth import get_user_model, login
 from django.utils.http import urlsafe_base64_decode, urlsafe_base64_encode
@@ -76,3 +82,12 @@ class ActivateAccountView(APIView):
                 {"message": "The activation link is invalid or has expired."},
                 status=status.HTTP_400_BAD_REQUEST,
             )
+
+
+
+
+# Create your views here.
+
+
+class LoginApiView(TokenObtainPairView):
+    serializer_class = CustomAuthTokenSerializer
