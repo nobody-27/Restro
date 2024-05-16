@@ -47,7 +47,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'after_response',
     'django_extensions',
-     'rest_framework_simplejwt',
+    'rest_framework_simplejwt',
+    'django_crontab',
 
 ]
 
@@ -186,3 +187,7 @@ try:
 except:
     print("e......")
     pass
+
+CRONJOBS = [
+    ('* * * * *','shops.cron.fetch_data')
+]

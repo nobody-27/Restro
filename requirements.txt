@@ -5,10 +5,11 @@ cryptography==42.0.7
 distlib==0.3.8
 Django==5.0.4
 django-after-response==0.2.2
+django-cors-headers==4.3.1
+django-crontab==0.7.1
 django-extensions==3.2.3
 djangorestframework==3.15.1
 djangorestframework-simplejwt==5.3.1
-mysqlclient==2.2.4
 pillow==10.3.0
 pycparser==2.22
 PyJWT==2.8.0
