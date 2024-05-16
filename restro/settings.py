@@ -42,19 +42,22 @@ INSTALLED_APPS = [
     'authentication',
     'shops',
     'permissions',
+    'payment',
 
     #external
     'rest_framework',
     'after_response',
     'django_extensions',
     'rest_framework_simplejwt',
-    'django_crontab',
+    "corsheaders",
+
 
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -188,6 +191,4 @@ except:
     print("e......")
     pass
 
-CRONJOBS = [
-    ('* * * * *','shops.cron.fetch_data')
-]
+CORS_ALLOW_ALL_ORIGINS = True
